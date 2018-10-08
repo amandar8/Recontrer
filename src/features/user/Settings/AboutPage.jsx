@@ -63,7 +63,7 @@ const AboutPage = ({ pristine, submitting, handleSubmit, updateProfile }) => {
           name="origin"
           options={{ types: ['(regions)'] }}
           component={PlaceInput}
-          placeholder="Country of Origin"
+          placeholder="Current residing city"
         />
         <Divider />
         <Button disabled={pristine || submitting} size="large" positive content="Update Profile" />
