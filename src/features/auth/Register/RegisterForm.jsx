@@ -4,12 +4,11 @@ import { Form, Segment, Button, Label, Divider } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 import { combineValidators, isRequired } from 'revalidate'
 import TextInput from '../../../app/common/form/TextInput';
-import { registerUser, socialLogin } from '../authActions'
+import { registerUser } from '../authActions'
 import SocialLogin from '../SocialLogin/SocialLogin'
 
 const actions = {
-  registerUser, 
-  socialLogin
+  registerUser
 }
 
 const validate = combineValidators({
@@ -18,7 +17,7 @@ const validate = combineValidators({
   password: isRequired('password')
 })
 
-const RegisterForm = ({registerUser, handleSubmit, error, invalid, submitting, socialLogin}) => {
+const RegisterForm = ({registerUser, handleSubmit, error, invalid, submitting}) => {
   return (
     <div>
       <Form size="large" onSubmit={handleSubmit(registerUser)}>
@@ -46,7 +45,7 @@ const RegisterForm = ({registerUser, handleSubmit, error, invalid, submitting, s
             Register
           </Button>
           <Divider horizontal>Or</Divider>
-        <SocialLogin socialLogin={socialLogin}/>
+        <SocialLogin/>
         </Segment>
       </Form>
     </div>

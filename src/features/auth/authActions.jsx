@@ -79,4 +79,4 @@ export const updatePassword = (creds) =>
         _error: error.message
       })
     }
-  };
+  }
