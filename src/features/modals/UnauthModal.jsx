@@ -3,9 +3,9 @@ import { Modal, Button, Divider } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 
-import { closeModal, openModal } from './modalActions';
+import { openModal, closeModal } from './modalActions';
 
-const actions = { closeModal, openModal };
+const actions = { openModal, closeModal };
 
 class UnauthModal extends Component {
 
@@ -20,7 +20,7 @@ class UnauthModal extends Component {
   }
 
   render() {
-    const { openModal, closeModal } = this.props;
+    const { openModal } = this.props;
     return (
       <Modal size="mini" open={true} onClose={this.handleCloseModal}>
         <Modal.Header>You need to be signed in to do that!</Modal.Header>
