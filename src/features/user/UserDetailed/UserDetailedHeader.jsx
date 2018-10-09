@@ -34,4 +34,3 @@ const UserDetailedHeader = ({profile}) => {
 };
 
 export default UserDetailedHeader;
-
